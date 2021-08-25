@@ -1,0 +1,43 @@
+<div class="container-fluid mt-3">
+  <div class="row mt-3">
+
+      <input type = "text" name ="page" [(ngModel)] = "page" (input) = "search()" (keyup.Space) = "search()"
+      (keyup) = "search()" placeholder="Enter Page to be searched "> 
+      <button routerLink="/diary/dailypage" class= "btn btn-primary ">Add Daily Page</button>
+      
+      <div *ngFor = "let page of pages | orderBy: '-id'" class= "col-lg-4 mt-3 mb-3">
+       
+      
+        <div  class="card flip-card" style="width: 18rem;">
+          <div class = "flip-card-inner">
+            <div class="flip-card-front">
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item ">{{page.date}}</li>
+                <li class="list-group-item">{{page.title}}</li>
+            </ul>
+            <img class="card-img-top" src="{{page.image}}" alt="Card image cap">
+         
+          </div>
+          <div class="card flip-card-back">
+            <div class="card-body">
+              <p style="font-size: 14px;" class="card-text">{{page.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+       <div  style = "margin-top:74px"class=" card-body">
+        <span>
+          <a [routerLink]="['/diary/',page.id, 'edit']" 
+        class="btn btn-sm  btn-edit">Edit </a>
+          <button class="btn btn-sm btn-del" (click) = "pageDelete(page.id)"> Delete</button>
+      </span>
+      </div>
+        </div>
+      </div>
+
+ </div>
+
+
+

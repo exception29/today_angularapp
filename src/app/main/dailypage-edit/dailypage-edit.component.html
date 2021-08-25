@@ -1,0 +1,19 @@
+<!-- Reactive Forms-->
+
+<form [formGroup] = "form" (submit) = "submit()">
+    <label>Date</label>
+    <input type="date" name = "date" formControlName = "date"/>
+
+    <label>Title</label>
+    <input type="text" name = "title" formControlName = "title"/>
+
+    <label>Description</label>
+    <input type="text" name = "desc" formControlName = "description"/>
+
+    <label>Image</label>
+    <input type="text" name = "image" formControlName = "image"/>
+
+    <button type = "submit" class="btn btn-primary">Save</button>
+
+
+</form>

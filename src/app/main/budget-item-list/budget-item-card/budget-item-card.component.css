@@ -1,0 +1,85 @@
+.root {
+    display: flex;
+    width: 100%;
+    position: relative; /*position x button*/
+}
+
+.root .x-icon-button{
+
+    position: absolute;
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        background:black;
+        right: -17px; /*half of ht and width ie.34/2*/
+        top: -17px;
+        background-image: url('/assets/delete_icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: scale(0);
+        transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+        
+        transform: scale(0);
+        opacity: 0;
+
+        cursor: pointer;
+
+}
+
+.root:hover .x-icon-button{
+    opacity:1;
+    transform: scale(1);
+}
+
+.root .x-icon-button:hover {
+    transform: scale(1.2);
+}
+.budget-item {
+    display: flex;
+    width: 100%;
+    background-color: peachpuff ;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+    
+}
+
+.budget-item:hover{
+    background-color: darken(gray, 4%);
+}
+.description {
+    display: flex;
+    flex-grow: 1;
+    font-size: 18px;
+    margin-left: 5px;
+    align-items: center;
+}
+
+.budget-item .amount{
+    padding: 5px;
+    border-radius: 3px;
+
+}
+
+
+.expense p {
+   
+    color: red;
+}
+
+.expense .amount{
+    background-color: white;
+}
+
+.income p {
+   
+    color:green;
+}
+
+.income .amount{
+    background-color: white;
+}
+
+    
+   

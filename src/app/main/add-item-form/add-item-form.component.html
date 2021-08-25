@@ -1,0 +1,68 @@
+
+<form #itemForm = "ngForm" (ngSubmit)="onSubmit(itemForm)" style = "margin-top:14px">
+  <div class="input-group">
+    <span ></span>
+    <input 
+          type="number"
+          name = amount
+          style = "width : 94px"
+           placeholder="amount" 
+           aria-label="Amount"
+            class="form-control"
+            required
+            [ngModel] = "item.amount">
+    <!-- <input
+           type="text" 
+           name = description
+          style = "margin-left: 10px; width : 240px"
+           placeholder = "description" 
+           aria-label="Description" 
+           class="form-control"
+           required
+           [ngModel]= "item.description"> -->
+           <select 
+           required
+           (change) = "onSelect($event)" placeholder="amount"
+           style = "width : 124px; height: 34px; margin-left: 10px;"
+           class="form-control"
+           name = description>
+           <option >Select Category</option>
+           <option *ngFor = "let val of incomeExp" value = "{{val.id}}">{{val.name}}</option>
+
+           </select>
+
+           <select
+          
+           required [ngModel] = "item.description"
+           placeholder="amount"
+           style = "width : 104px; height: 34px; margin-left: 10px;"
+           class="form-control"
+           name = description>
+           <option>Select</option>
+           <option *ngFor = "let val of budget">{{val.name}}</option>
+           </select>
+           <!-- <select  placeholder="amount"
+            style = "width : 74px; height: 34px; margin-left: 10px;"
+            class="form-control"
+            name = description
+            required [ngModel] = "item.description">
+             <option selected>Income</option>
+             <option>Shopping</option>
+             <option>Bonus</option>
+             <option>Party</option>
+             <option>Dividend</option>
+             <option>Rent</option>
+             <option>Electricity Bill</option>
+           </select> -->
+    <button 
+          type = "submit"
+           class="btn btn-sm" 
+           style = "margin-left: 10px; height: 34px"
+           [ngClass]="{ 'bg-primary': isNewItem, 'bg-success': !isNewItem }" 
+           [disabled]= "!itemForm.valid"> 
+            <p *ngIf="isNewItem">Add</p>
+            <p *ngIf="!isNewItem">Save</p>
+    </button>
+
+  </div>
+</form>

@@ -1,0 +1,17 @@
+<form (submit)="submit()">
+    <label>Date</label>
+    <input type="date" name = "date" [(ngModel)]="date"/>
+
+    <label>Title</label>
+    <input type="text" name = "title" [(ngModel)]="title"/>
+
+    <label>Description</label>
+    <input type="text" name = "description" [(ngModel)]="description"/>
+
+    <label>Image</label>
+    <input type="text" name = "image" [(ngModel)]="image"/>
+
+    <button type = "submit" class="btn btn-success">Add Page</button>
+
+
+</form>

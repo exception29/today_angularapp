@@ -1,0 +1,25 @@
+{
+  "diary": [
+    {
+      "date": "1999-04-29",
+      "title": "Birth",
+      "description": "My arrival",
+      "image": "https://www.wideopeneats.com/wp-content/uploads/2020/10/birthday-cake2.png",
+      "id": 1
+    },
+    {
+      "date": "2021-07-23",
+      "title": "Joining at Xoriant Solutions",
+      "description": "First Day , at First Job!",
+      "image": "https://jobs.cybertecz.in/wp-content/uploads/2021/03/5c8a3816bf769.jpeg",
+      "id": 2
+    },
+    {
+      "date": "2021-08-16",
+      "title": "angular project done",
+      "description": "learned much",
+      "image": "https://teachyourkidscode.com/wp-content/uploads/2018/12/Teach-Your-Kids-Code-Front-Page-Image-1.jpg",
+      "id": 4
+    }
+  ]
+}
